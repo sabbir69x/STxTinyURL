@@ -19,7 +19,7 @@ STxTinyURL is a Telegram bot that allows you to easily shorten URLs using the Ti
 
 ## How to Use 🚀
 
-1. Start a chat with the bot by clicking [here](https://t.me/YourBotName_bot) or search for `@YourBotName_bot` on Telegram.
+1. Start a chat with the bot by clicking [here](https://t.me/STxTinyURL_bot) or search for `@STxTinyURL_bot` on Telegram.
 2. Send the bot a URL that you want to shorten.
 3. The bot will reply with the shortened URL for easy sharing.
 
