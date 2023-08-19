@@ -1,1 +1,1 @@
-web: python shorturl.py
+worker: python shorturl.py
