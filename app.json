@@ -9,7 +9,7 @@
     }
   },
   "scripts": {
-    "postdeploy": "python STxURL/shorturl.py"
+    "postdeploy": "python bot.py"
   },
   "buildpacks": [
     {
