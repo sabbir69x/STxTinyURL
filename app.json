@@ -10,7 +10,5 @@
   },
   "scripts": {
     "postdeploy": "python STxURL/shorturl.py"
-    "buildpacks": [ {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"},
-                  {"url": "heroku/python" } ]
   }
 }
