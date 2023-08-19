@@ -1,1 +1,1 @@
-worker: python shorturl.py
+web: python bot.py
