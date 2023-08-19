@@ -1,1 +1,1 @@
-web: python shorturl.py
+web: python bot.py
