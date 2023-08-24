@@ -2,15 +2,14 @@ import os
 import logging
 from pyrogram import Client, filters
 import requests
-from config import API_TOKEN, API_ID, API_HASH
 
 # Initialize the Pyrogram app with your API token
-API_TOKEN = os.environ.get("API_TOKEN")  # Make sure this matches the environment variable you set on Heroku
+API_TOKEN = os.environ.get("6483542043:AAFw6vDYOhrNQXaMKrl5Z-AXmB-odyF3NXg")  # Make sure this matches the environment variable you set on Heroku
 
 app = Client(
     "my_bot",
-    api_id=os.environ.get("API_ID"),  # Replace with your actual API ID
-    api_hash=os.environ.get("API_HASH"),  # Replace with your actual API hash
+    api_id=os.environ.get("23434591"),  # Replace with your actual API ID
+    api_hash=os.environ.get("e41c98fa058711992b62e35aae553303"),  # Replace with your actual API hash
     bot_token=API_TOKEN,
 )
 
