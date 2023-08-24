@@ -2,6 +2,7 @@ import os
 import logging
 from pyrogram import Client, filters
 import requests
+from config import API_TOKEN, API_ID, API_HASH
 
 # Initialize the Pyrogram app with your API token
 API_TOKEN = os.environ.get("API_TOKEN")  # Make sure this matches the environment variable you set on Heroku
