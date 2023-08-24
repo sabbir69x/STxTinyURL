@@ -3,9 +3,15 @@ import logging
 from pyrogram import Client, filters
 import requests
 
-API_TOKEN = os.environ.get("6483542043:AAFw6vDYOhrNQXaMKrl5Z-AXmB-odyF3NXg")  # Make sure this matches the environment variable you set on Heroku
+# Initialize the Pyrogram app with your API token
+API_TOKEN = os.environ.get("API_TOKEN")  # Make sure this matches the environment variable you set on Heroku
 
-app = Client("my_bot", bot_token=API_TOKEN)
+app = Client(
+    "my_bot",
+    api_id=os.environ.get("API_ID"),  # Replace with your actual API ID
+    api_hash=os.environ.get("API_HASH"),  # Replace with your actual API hash
+    bot_token=API_TOKEN,
+)
 
 # Start command handler
 @app.on_message(filters.command("start"))
@@ -26,7 +32,7 @@ async def shorten_url(client, message):
         short_url = response.text
         await message.reply_text(f"ʜᴇʀᴇ's ᴛʜᴇ sʜᴏʀᴛ ᴜʀʟ:\n{short_url}")
     except Exception as e:
-        await message.reply_text("sᴏʀʀʏ, ᴛʜᴇʀᴇ ᴡᴀs ᴀɴ ᴇʀʀᴏʀ ᴡʜɪʟᴇ sʜᴏʀᴛᴇɴɪɴɢ ᴛʜᴇ ᴜʀʟ!")
+        await message.reply_text("sᴏʀʏ, ᴛʜᴇʀᴇ ᴡᴀs ᴀɴ ᴇʀʀᴏʀ ᴡʜɪʟᴇ sʜᴏʀᴛᴇɴɪɴɢ ᴛʜᴇ ᴜʀʟ!")
 
 if __name__ == '__main__':
     app.run()
