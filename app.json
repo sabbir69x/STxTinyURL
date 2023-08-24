@@ -1,19 +1,16 @@
 {
   "name": "STxTinyURL",
-  "description": "Telegram bot for shortening URL's using TinyURL API!",
+  "description": "A telegram bot which can short url using TinyURL.",
   "repository": "https://github.com/STxSABBIR/STxTinyURL",
   "env": {
     "API_TOKEN": {
-      "description": "Your Telegram Bot API token",
+      "description": "Your Telegram bot API token",
       "required": true
     }
   },
-  "scripts": {
-    "postdeploy": "python bot.py"
-  },
   "buildpacks": [
     {
-      "url": "https://github.com/heroku/heroku-buildpack-python.git"
+      "url": "heroku/python"
     }
   ]
 }
