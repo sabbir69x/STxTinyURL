@@ -3,7 +3,7 @@ import logging
 from pyrogram import Client, filters
 import requests
 
-API_TOKEN = os.environ.get("6483542043:AAFw6vDYOhrNQXaMKrl5Z-AXmB-odyF3NXg")  # Replace with your actual bot API token
+API_TOKEN = os.environ.get("6483542043:AAFw6vDYOhrNQXaMKrl5Z-AXmB-odyF3NXg")  # Make sure this matches the environment variable you set on Heroku
 
 app = Client("my_bot", bot_token=API_TOKEN)
 
