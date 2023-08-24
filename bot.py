@@ -2,7 +2,7 @@ import logging
 from pyrogram import Client, filters
 import requests
 
-API_TOKEN = '6483542043:AAFw6vDYOhrNQXaMKrl5Z-AXmB-odyF3NXg'  # Replace with your actual bot API token
+API_TOKEN = os.environ.get("6483542043:AAFw6vDYOhrNQXaMKrl5Z-AXmB-odyF3NXg")  # Replace with your actual bot API token
 
 app = Client("my_bot", bot_token=API_TOKEN)
 
