@@ -1,15 +1,14 @@
 import os
-import logging
 from pyrogram import Client, filters
 import requests
 
 # Initialize the Pyrogram app with your API token
-API_TOKEN = os.environ.get("6483542043:AAFw6vDYOhrNQXaMKrl5Z-AXmB-odyF3NXg")  # Make sure this matches the environment variable you set on Heroku
+API_TOKEN = os.environ.get("YOUR_API_TOKEN")  # Make sure this matches the environment variable you set
 
 app = Client(
     "my_bot",
-    api_id=os.environ.get("23434591"),  # Replace with your actual API ID
-    api_hash=os.environ.get("e41c98fa058711992b62e35aae553303"),  # Replace with your actual API hash
+    api_id=int(os.environ.get("YOUR_API_ID", 0)),  # Replace with your actual API ID
+    api_hash=os.environ.get("YOUR_API_HASH"),  # Replace with your actual API hash
     bot_token=API_TOKEN,
 )
 
@@ -20,7 +19,7 @@ async def start_command(client, message):
     await message.reply_text(
         f"ʜᴇʏ {mention_html} ! 🥳\n\n"
         f"ᴛʜɪs ɪs sᴛxᴛɪɴʏᴜʀʟ ʙᴏᴛ ᴡʜɪᴄʜ ᴄᴀɴ sʜᴏʀᴛ ᴀɴʏ ʟɪɴᴋ ᴜsɪɴɢ ᴛɪɴʏᴜʀʟ ᴀᴘɪ!\n\n"
-        f"ᴛᴏ sʜᴏʀᴛ ᴀɴʏ ᴜʀʟ, ᴊᴜsᴛ sᴇɴᴅ ᴍᴇ ᴛʜᴀᴛ ᴜʀʟ ʜᴇʀᴇ ᴀɴᴅ ɪ ᴡɪʟʟ sʜᴏʀᴛ ɪᴛ ғᴏʀ ʏᴏᴜ! 😉"
+        f"ᴛᴏ sʜᴏʀᴛ ᴀɴʏ ᴜʀʟ, ᴊᴜsᴛ sᴇɴᴅ ᴍᴇ ᴛʜᴀᴛ ᴜʀʟ ʜᴇʀᴇ ᴀɴᴅ ɪ ᴡɪʟʟ sʜᴏʀᴛᴇɴ ɪᴛ ғᴏʀ ʏᴏᴜ! 😉"
     )
 
 # URL shortening handler
